@@ -12,9 +12,9 @@ fun main(args: Array<String>) {
     print("Введите ежемесячный процент по вкладу: ")
     val percentRate = readLine()!!.toDouble()
     print("Произвести расчет с капитализацией процентов? [y/n]: ")
-    val isCapitalizeInput = readLine()!!
+    val isCapitalizeInput = readLine()!!.trim()
 
-    val isCapitalize = isCapitalizeInput.trim() == "y"
+    val isCapitalize = isCapitalizeInput == "y"
     var sumFinish = sumStart
     println()
 
