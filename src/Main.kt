@@ -20,10 +20,10 @@ fun main(args: Array<String>) {
 
     for (i in 1..duration) {
         val increment = (if (isCapitalize) sumFinish else sumStart) * (percentRate / 100)
-        println("Месяц №$i. Сумма вклада увеличится на $increment рублей.")
         sumFinish += increment
-        println("По итогу месяца сумма вклада составит $sumFinish")
-        println()
+
+        println("Месяц №$i. Сумма вклада увеличится на $increment рублей.")
+        println("По итогу месяца сумма вклада составит $sumFinish \n")
     }
 
     println("Итоговая сумма вклада будет равна $sumFinish рублей.")
