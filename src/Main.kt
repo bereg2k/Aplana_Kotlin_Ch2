@@ -27,7 +27,7 @@ fun main(args: Array<String>) {
 
     // Печать заголовка
     println(header)
-    for (i in 1..header.length) print("_")
+    for (i in 1..maxLength * countriesArray.size) print("-")
     println()
 
     // Печать содержимого массива в таблицу
