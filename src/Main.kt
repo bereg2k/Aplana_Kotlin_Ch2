@@ -16,8 +16,14 @@ fun main(args: Array<String>) {
     val countryLabel = "Country"
     val capitalLabel = "Capital"
     val currencyLabel = "Currency"
-    var space = ""; for (i in 1..20) space += " "
-    val header = countryLabel + space + capitalLabel + space + currencyLabel
+    val maxLength = 30 // максимальная длина элемента в таблице
+
+    // Промежутки между 1 и 2 столбцами в зависимости от максимальной длины элемента и длины их заголовков
+    var spaceOne = ""; for (i in 1..maxLength - countryLabel.length) spaceOne += " "
+    var spaceTwo = ""; for (i in 1..maxLength - capitalLabel.length) spaceTwo += " "
+
+    // Формирование заголовка
+    val header = countryLabel + spaceOne + capitalLabel + spaceTwo + currencyLabel
 
     // Печать заголовка
     println(header)
@@ -29,8 +35,8 @@ fun main(args: Array<String>) {
         for (j in 0..(countriesArray.size - 1)) {
             print(countriesArray[j][i])
 
-            // Дополнительный цикл для динамического выравнивания текста в таблице
-            for (k in 1..(27 - countriesArray[j][i].length))
+            // Дополнительный цикл для динамического выравнивания текста в таблице в зависимости от длины элемента
+            for (k in 1..(maxLength - countriesArray[j][i].length))
                 print(" ")
         }
         println()
